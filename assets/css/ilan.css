@@ -1,0 +1,165 @@
+/* ==========================================================================
+   Tarlaal — ilan detay sayfası (ilan.css)
+   style.css üzerine yalnızca bu sayfaya özel düzen: başlık alanı, galeri
+   varyantları, özellik tabloları, harita, danışman kutusu, sticky fiyat kartı.
+   ========================================================================== */
+
+/* ---------- üst alan: breadcrumb + başlık ---------- */
+.listing-top { padding-bottom: clamp(40px, 6vw, 72px); }
+.listing-crumbs { margin: var(--space-5) 0 var(--space-4); }
+.listing-crumbs .breadcrumb li:last-child { min-width: 0; }
+.listing-crumbs .breadcrumb [aria-current] {
+  display: inline-block; max-width: min(100%, 38ch); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; vertical-align: bottom;
+}
+
+.listing-head {
+  display: flex; justify-content: space-between; align-items: flex-end; gap: var(--space-4) var(--space-6); flex-wrap: wrap;
+  margin-bottom: clamp(20px, 3vw, 32px); padding-bottom: clamp(16px, 2.5vw, 24px); border-bottom: 1px dashed var(--kirec-300);
+}
+.listing-head__main { flex: 1 1 520px; min-width: 0; }
+.listing-head__kicker {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; margin: 0 0 10px;
+  font-family: var(--font-mono); font-size: .72rem; letter-spacing: .08em; color: var(--ink-3); line-height: 1.5;
+}
+.listing-head__kicker .type { color: var(--cimen-700); font-weight: 500; letter-spacing: .16em; }
+.listing-head__kicker b { font-weight: 500; color: var(--ink-2); }
+.listing-head__kicker .sep { opacity: .5; }
+.listing-head__title { font-size: clamp(1.8rem, 3.4vw, 2.7rem); line-height: 1.08; letter-spacing: -.015em; margin: 0 0 10px; }
+.listing-head__loc { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 10px; margin: 0; color: var(--ink-2); font-size: .98rem; }
+.listing-head__loc .icon { color: var(--cimen-500); }
+.listing-head__loc a { font-size: .85rem; font-weight: 600; }
+.listing-head__badges { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+.listing-head__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; flex: 0 1 auto; max-width: 100%; min-width: 0; }
+.fav-btn.is-active { color: var(--danger); border-color: var(--danger); }
+.fav-btn.is-active .icon { fill: currentColor; }
+
+/* ---------- iki kolon düzen ---------- */
+.listing { display: grid; gap: clamp(24px, 4vw, 40px); grid-template-columns: minmax(0, 1fr); align-items: start; }
+@media (min-width: 900px) {
+  .listing { grid-template-columns: minmax(0, 1fr) minmax(320px, 400px); column-gap: clamp(28px, 4vw, 56px); }
+  .listing__gallery { grid-column: 1; grid-row: 1; }
+  .listing__body { grid-column: 1; grid-row: 2; }
+  .listing__side { grid-column: 2; grid-row: 1 / span 2; }
+}
+.listing__body { display: grid; gap: clamp(36px, 5vw, 64px); margin-top: clamp(4px, 1.5vw, 12px); min-width: 0; }
+.listing__section { min-width: 0; }
+.listing__section .eyebrow { margin-bottom: 6px; }
+.listing__section h2 { font-size: clamp(1.45rem, 2.3vw, 1.9rem); margin-bottom: 16px; }
+.listing__section .prose { max-width: 70ch; color: var(--ink-2); }
+.listing__section .prose p { font-size: 1rem; line-height: 1.7; }
+
+/* ---------- galeri varyantları ---------- */
+.gallery__main { margin: 0; }
+.gallery--1 { grid-template-columns: 1fr; grid-template-rows: auto; }
+.gallery--1 .gallery__main { grid-column: 1; grid-row: 1; }
+.gallery--2 { grid-template-columns: 2fr 1fr; }
+.gallery--3 { grid-template-columns: 3fr 1fr; grid-template-rows: repeat(3, minmax(0, 1fr)); }
+.gallery--3 .gallery__main { grid-row: 1 / 4; }
+/* küçük fotolar ana görselin yüksekliğine kilitlenir; kendi 4/3 oranlarına göre sarkmaz */
+.gallery--3 .gallery__thumb { position: relative; min-height: 0; }
+.gallery--3 .gallery__thumb img { position: absolute; inset: 0; width: 100%; height: 100%; aspect-ratio: auto; object-fit: cover; }
+.gallery--sold .gallery__main img { filter: grayscale(.7) brightness(.92); }
+.gallery__thumb:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.gallery__thumb img { display: block; }
+/* ana görsel sarmalayıcısı (statik) */
+.gallery__next { display: block; width: 100%; height: 100%; margin: 0; padding: 0; border-radius: inherit; overflow: hidden; }
+.gallery__next img { display: block; }
+/* önceki / sonraki okları: sağ-sol ortada, koyu yarı saydam yuvarlak zemin */
+.gallery__nav {
+  position: absolute; top: 50%; transform: translateY(-50%); z-index: 2;
+  width: 40px; height: 40px; padding: 0; border: 0; border-radius: 50%; cursor: pointer;
+  display: grid; place-items: center; background: rgba(28,20,16,.62); color: var(--kirec-50);
+  box-shadow: 0 2px 8px rgba(28,20,16,.25); transition: background .2s, transform .2s;
+}
+.gallery__nav .icon { width: 20px; height: 20px; stroke-width: 2.4; }
+.gallery__nav--prev { left: 12px; }
+.gallery__nav--next { right: 12px; }
+.gallery__nav:hover { background: rgba(28,20,16,.85); }
+.gallery__nav:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.gallery__nav:active { transform: translateY(-50%) scale(.94); }
+/* fotoğraf üstü rozetler: yoğun/koyu görsel üzerinde opak açık zemin */
+.gallery__main .badge--reserved { background: var(--surface); color: var(--ink); box-shadow: var(--shadow-s); }
+@media (max-width: 639.98px) {
+  .gallery--2 { grid-template-columns: repeat(2, 1fr); }
+  .gallery--3 { grid-template-columns: repeat(3, 1fr); grid-template-rows: auto auto; }
+  .gallery--3 .gallery__main { grid-row: 1; }
+  .gallery--3 .gallery__thumb img { position: static; aspect-ratio: 4 / 3; height: auto; }
+  /* 44px dokunma hedefi: başlık altındaki Kopyala / WhatsApp / Favori butonları */
+  .listing-head__actions .btn { min-height: 44px; padding-block: 10px; }
+}
+
+/* ---------- özellik tabloları ---------- */
+/* tek tablo (12 satır): uzun "Konum" değerleri sarınca hizalama sorunu çıkmaz */
+.specs-grid { display: grid; gap: 14px; grid-template-columns: 1fr; }
+.specs-grid .spec-table th { width: 30%; white-space: nowrap; padding-right: 8px; }
+.specs-grid .spec-table th, .specs-grid .spec-table td { vertical-align: middle; }
+.specs-grid .spec-table td { overflow-wrap: anywhere; }
+.specs-grid .badge { vertical-align: middle; }
+
+.features-list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.features-list .chip { white-space: normal; padding: 8px 12px; font-size: .86rem; }
+
+/* ---------- harita ---------- */
+.map-embed iframe { height: clamp(260px, 40vw, 380px); }
+.map-meta { display: flex; justify-content: space-between; align-items: center; gap: 8px 16px; flex-wrap: wrap; margin: 12px 0 0; font-size: .85rem; }
+.map-meta .mono { color: var(--ink-3); }
+.map-meta a { font-weight: 600; }
+.map-note { display: flex; align-items: flex-start; gap: 8px; margin: 10px 0 0; font-size: .82rem; color: var(--ink-3); }
+.map-note .icon { margin-top: 3px; color: var(--accent-ink); }
+
+/* ---------- danışman kutusu ---------- */
+.agent {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 16px 20px; padding: clamp(20px, 3vw, 28px);
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-l); box-shadow: var(--shadow-s);
+}
+.agent__avatar {
+  width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center; flex: none;
+  background: var(--cimen-700); color: var(--kirec-50); font-family: var(--font-display); font-weight: 600; font-size: 1.3rem;
+}
+.agent__body { flex: 1 1 240px; min-width: 0; }
+.agent__name { font-size: 1.25rem; margin: 0; }
+.agent__role { display: block; font-family: var(--font-body); font-size: .86rem; font-weight: 400; color: var(--ink-3); margin-top: 2px; }
+.agent__meta { list-style: none; margin: 10px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: .88rem; color: var(--ink-2); }
+.agent__meta li { display: inline-flex; align-items: center; gap: 6px; }
+.agent__meta .icon { color: var(--cimen-500); }
+.agent__meta a { color: inherit; text-decoration: none; font-weight: 500; }
+.agent__meta a:hover { color: var(--accent-ink); }
+.agent__actions { display: flex; flex-wrap: wrap; gap: 8px; }
+
+/* ---------- sağ sütun: fiyat + form kartı ---------- */
+.listing-card .form-card__head .eyebrow { margin-bottom: 8px; }
+.listing-card .price--lg { line-height: 1.05; }
+.listing-card__note { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin: 14px 0 0; font-size: .84rem; color: var(--ink-2); }
+.listing-card__note span:not(.chip) { flex: 1 1 160px; }
+.listing-card__status {
+  display: flex; align-items: flex-start; gap: 8px; margin: 0 0 16px; padding: 12px 14px; border-radius: 10px;
+  background: var(--bugday-100); border: 1px solid var(--bugday-300); color: var(--toprak-700); font-size: .86rem; line-height: 1.5;
+}
+.listing-card__status .icon { margin-top: 3px; color: var(--accent-ink); }
+.listing-card .form { gap: 14px; }
+.listing-card .field textarea { min-height: 96px; }
+.listing-card__cta { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 14px; padding-top: 14px; border-top: 1px dashed var(--border); }
+@media (max-width: 400px) { .listing-card__cta { grid-template-columns: 1fr; } }
+.listing-card .form__note { margin-top: 12px; }
+.listing--sold .listing-card .price { color: var(--ink-3); text-decoration: line-through; text-decoration-thickness: 2px; text-decoration-color: var(--danger); }
+.sold-box { text-align: center; padding: 6px 0 2px; }
+.sold-box__icon { width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; margin: 0 auto 14px; background: var(--kirec-100); color: var(--toprak-700); font-size: 1.4rem; }
+.sold-box__icon .icon { width: 1.4rem; height: 1.4rem; }
+.sold-box h3 { margin-bottom: 8px; }
+.sold-box p { color: var(--ink-2); font-size: .92rem; margin-bottom: 16px; }
+.sold-box .btn + .btn { margin-top: 8px; }
+
+/* ---------- bulunamadı ---------- */
+.listing-notfound { padding: clamp(8px, 2vw, 16px) 0 clamp(16px, 3vw, 32px); }
+.listing-notfound .empty { max-width: 680px; margin-inline: auto; }
+.listing-notfound .h3 { margin: 0 0 8px; }
+.listing-notfound__actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+
+/* ---------- benzer ilanlar ---------- */
+#benzer .section__head { align-items: flex-end; }
+
+/* ---------- print ---------- */
+@media print {
+  .listing { grid-template-columns: 1fr; }
+  .listing-head__actions, .listing-card__cta, .gallery__thumb, .map-embed { display: none !important; }
+}

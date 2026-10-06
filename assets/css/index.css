@@ -1,0 +1,60 @@
+/* Tarlaal — ana sayfa (index.css). Yalnızca index.html'e özel küçük eklemeler. */
+
+/* Hero: arama kutusu — "parsel kartı" hissi (mono etiketler, ochre üst kenar) */
+.hero__search { box-shadow: inset 0 3px 0 var(--bugday-500), var(--shadow-l); }
+.hero__search .field > label,
+.hero__search .field label {
+  font-family: var(--font-mono); font-size: .72rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .14em; color: var(--ink-3);
+}
+/* Alan yükseklikleri "İlan Ara" butonuyla (46px) hizalı */
+.hero__search .select, .hero__search .input { height: 46px; }
+.hero__stats .stat { flex: 1 1 140px; }
+.hero__stats .stat__label { white-space: nowrap; }
+@media (max-width: 639.98px) {
+  .hero { align-items: flex-end; padding-top: 88px; }
+  .hero__stats { gap: 18px 24px; }
+  .hero__stats .stat { flex: 1 1 calc(50% - 24px); }
+  .hero__stats .stat__num { font-size: 1.6rem; }
+}
+
+/* Bölüm başlığı sağındaki link */
+.section__link { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; text-decoration: none; white-space: nowrap; }
+.section__link .icon { transition: transform .25s var(--ease); }
+.section__link:hover .icon { transform: translateX(3px); }
+.section__link .count { font-family: var(--font-mono); font-weight: 500; font-size: .78rem; color: var(--ink-3); }
+
+/* Nasıl çalışır — iki yol */
+.paths { display: grid; gap: clamp(16px, 2.5vw, 28px); grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); }
+.path { display: flex; flex-direction: column; gap: var(--space-5); padding: clamp(22px, 3vw, 36px); background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-l); box-shadow: var(--shadow-s); }
+.path__head { display: flex; align-items: center; gap: 14px; }
+.path__head .feature__icon { width: 48px; height: 48px; border-radius: 12px; }
+.path__kicker { display: block; font-family: var(--font-mono); font-size: .68rem; letter-spacing: .16em; color: var(--ink-3); margin-bottom: 4px; }
+.path__title { margin: 0; font-size: 1.45rem; }
+.path--sell .feature__icon { background: var(--bugday-100); color: var(--accent-ink); }
+.path .steps--vertical .step:last-child { padding-bottom: 0; }
+.path__cta { margin-top: auto; padding-top: var(--space-4); border-top: 1px dashed var(--border); display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.path__cta p { margin: 0; font-size: .88rem; color: var(--ink-3); }
+
+/* Neden Tarlaal — koyu zemin üstünde çerçeveli özellik kutuları */
+.why-grid .feature {
+  padding: clamp(20px, 2.5vw, 28px); border: 1px solid rgba(251,248,242,.14); border-radius: var(--radius-l);
+  background: rgba(251,248,242,.04); transition: border-color .3s, background-color .3s, transform .3s var(--ease);
+}
+.why-grid .feature:hover { border-color: rgba(217,164,65,.5); background: rgba(251,248,242,.07); transform: translateY(-3px); }
+.why-grid .feature__title { color: var(--ink-inverse); }
+.why-grid .feature__num { font-family: var(--font-mono); font-size: .68rem; letter-spacing: .16em; color: var(--bugday-300); margin-left: auto; }
+.why-grid .feature__head { display: flex; align-items: center; gap: 12px; }
+
+/* Bölgeler: altı kartın altındaki küçük not */
+.regions-note { display: flex; align-items: center; gap: 10px; margin: var(--space-5) 0 0; font-size: .9rem; color: var(--ink-3); }
+.regions-note .icon { color: var(--cimen-500); }
+
+/* CTA band içindeki telefon butonu ikon hizası */
+.cta-band__actions .btn .icon { width: 1.05em; height: 1.05em; }
+
+/* Tablet (640–1199px): üçlü yorum ve blog ızgaralarında tek kalan 3. kart iki sütunu kaplasın */
+@media (min-width: 640px) and (max-width: 1199.98px) {
+  #yorumlar .testimonial-grid > :nth-child(3):last-child,
+  #blog .grid--3 > :nth-child(3):last-child { grid-column: 1 / -1; }
+}

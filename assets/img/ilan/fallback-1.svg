@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Tarla ve güneş">
+  <rect width="1200" height="900" fill="#FBF8F2"/>
+  <circle cx="900" cy="300" r="120" fill="#D9A441"/>
+  <circle cx="900" cy="300" r="170" fill="none" stroke="#EFD08A" stroke-width="3"/>
+  <path d="M0 470 Q300 400 600 450 T1200 430 V900 H0Z" fill="#8FBF9F"/>
+  <path d="M0 540 Q400 480 800 540 T1200 520 V900 H0Z" fill="#2F7A4B"/>
+  <g stroke="#1F4D32" stroke-width="3" fill="none" opacity=".55">
+    <path d="M0 620 L1200 590"/><path d="M0 680 L1200 650"/><path d="M0 740 L1200 710"/><path d="M0 800 L1200 770"/><path d="M0 860 L1200 830"/>
+  </g>
+  <path d="M500 900 L580 545 L612 545 L740 900 Z" fill="#B9977A" opacity=".9"/>
+  <path d="M620 900 L596 548" stroke="#7A5A3E" stroke-width="3" stroke-dasharray="18 14" fill="none" opacity=".5"/>
+  <text x="1140" y="860" text-anchor="end" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#1F4D32" opacity=".7">tarlaal</text>
+</svg>

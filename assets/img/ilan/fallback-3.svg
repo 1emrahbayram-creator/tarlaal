@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Deniz kıyısında parsel">
+  <rect width="1200" height="900" fill="#FBF8F2"/>
+  <rect y="0" width="1200" height="420" fill="#E3F0E7"/>
+  <circle cx="300" cy="200" r="80" fill="#D9A441"/>
+  <rect y="300" width="1200" height="160" fill="#8FBF9F"/>
+  <g stroke="#2F7A4B" stroke-width="3" fill="none" opacity=".5">
+    <path d="M0 340 Q60 325 120 340 T240 340 T360 340 T480 340 T600 340 T720 340 T840 340 T960 340 T1080 340 T1200 340"/>
+    <path d="M0 400 Q60 385 120 400 T240 400 T360 400 T480 400 T600 400 T720 400 T840 400 T960 400 T1080 400 T1200 400"/>
+  </g>
+  <path d="M0 440 Q300 470 600 450 T1200 470 V900 H0Z" fill="#E6DFD2"/>
+  <path d="M0 560 Q300 540 600 570 T1200 550 V900 H0Z" fill="#2F7A4B"/>
+  <path d="M380 600 L820 585 L860 820 L350 840 Z" fill="#D9A441" opacity=".9"/>
+  <path d="M380 600 L820 585 L860 820 L350 840 Z" fill="none" stroke="#1C1410" stroke-width="4" stroke-dasharray="14 10"/>
+  <text x="600" y="730" text-anchor="middle" font-family="ui-monospace, 'IBM Plex Mono', monospace" font-size="40" fill="#1C1410">118 / 7</text>
+  <text x="1140" y="860" text-anchor="end" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#FBF8F2" opacity=".8">tarlaal</text>
+</svg>

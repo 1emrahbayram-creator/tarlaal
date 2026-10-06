@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 64" width="280" height="64" role="img" aria-label="Tarlaal — arsa, tarla, arazi">
+  <defs>
+    <clipPath id="lgl-clip"><rect x="2" y="8" width="48" height="48" rx="12"/></clipPath>
+  </defs>
+  <g clip-path="url(#lgl-clip)">
+    <polygon points="2,8 27.1,8 25.4,32.5 2,30.9" fill="#3E9A60"/>
+    <polygon points="27.1,8 50,8 50,34.2 25.4,32.5" fill="#2F7A4B"/>
+    <polygon points="2,30.9 25.4,32.5 23.8,56 2,56" fill="#2F7A4B"/>
+    <polygon points="25.4,32.5 50,34.2 50,56 23.8,56" fill="#D9A441"/>
+    <path d="M27.1 8 L23.8 56 M2 30.9 L50 34.2" stroke="#1C1410" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+  </g>
+  <text x="62" y="41" font-family="Montserrat, 'Segoe UI', Arial, sans-serif" font-weight="700" font-size="30" letter-spacing="-0.9" fill="#FBF8F2">tarla<tspan fill="#D9A441">al</tspan></text>
+  <text x="63" y="56" font-family="'IBM Plex Mono', Montserrat, ui-monospace, monospace" font-size="9" letter-spacing="2.2" fill="#B9977A">ARSA · TARLA · ARAZİ</text>
+</svg>

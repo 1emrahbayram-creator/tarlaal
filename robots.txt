@@ -1,0 +1,8 @@
+# tarlaal.com — robots.txt
+User-agent: *
+Allow: /
+Disallow: /partials/
+Disallow: /tools/
+Disallow: /docs/
+
+Sitemap: https://tarlaal.com/sitemap.xml

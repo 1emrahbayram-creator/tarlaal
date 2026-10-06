@@ -1,0 +1,119 @@
+/* ==========================================================================
+   Tarlaal — blog sayfaları (blog.css)
+   blog.html: kategori filtresi · blog-*.html: editöryal yazı düzeni
+   ========================================================================== */
+
+/* ---------- Liste: kategori çipleri ---------- */
+.blog-filter { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: clamp(24px, 3vw, 36px); }
+.blog-filter .chip { cursor: pointer; padding: 8px 14px; font-size: .84rem; transition: background-color .2s, border-color .2s, color .2s; }
+.blog-filter .chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.blog-filter .count { font-family: var(--font-mono); font-size: .7rem; opacity: .7; }
+.blog-grid .card--post .card__text { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.blog-aside { display: grid; gap: clamp(24px, 4vw, 48px); grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); align-items: start; }
+
+/* ---------- Yazı: başlık alanı ---------- */
+.post { padding-top: clamp(28px, 5vw, 56px); }
+.post__head { text-align: center; }
+.post__head .breadcrumb { justify-content: center; margin-bottom: var(--space-5); }
+.post__head .eyebrow { justify-content: center; }
+.post__title { font-size: clamp(2.1rem, 4.8vw, 3.6rem); line-height: 1.05; letter-spacing: -.02em; margin-bottom: .4em; }
+.post__head .lead { margin-inline: auto; }
+.post__meta {
+  list-style: none; margin: var(--space-5) 0 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 0;
+  font-family: var(--font-mono); font-size: .74rem; letter-spacing: .06em; color: var(--ink-3);
+}
+.post__meta li { display: inline-flex; align-items: center; }
+.post__meta li + li::before { content: "·"; margin-inline: 10px; opacity: .5; }
+.post__meta time { color: inherit; }
+.post__meta .post__author { color: var(--ink-2); font-weight: 500; }
+
+/* ---------- Yazı: kapak ---------- */
+.post__cover { margin: clamp(28px, 4vw, 48px) auto 0; max-width: 1040px; }
+.post__cover img {
+  width: 100%; aspect-ratio: 16 / 8; object-fit: cover; border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-l); background: var(--surface-2); filter: saturate(.95) sepia(.06);
+}
+.post__cover figcaption { margin-top: 10px; text-align: center; font-family: var(--font-mono); font-size: .7rem; letter-spacing: .06em; color: var(--ink-3); }
+@media (max-width: 639.98px) { .post__cover img { aspect-ratio: 4 / 3; border-radius: var(--radius-l); } }
+
+/* ---------- Yazı: gövde ---------- */
+.post__body { margin-top: clamp(32px, 5vw, 56px); font-size: 1.06rem; line-height: 1.75; }
+.post__body p { color: var(--ink-2); }
+.post__body h2 { font-size: clamp(1.55rem, 2.8vw, 2.15rem); line-height: 1.15; margin-top: 1.8em; }
+.post__body h3 { font-size: clamp(1.2rem, 1.8vw, 1.4rem); margin-top: 1.5em; }
+.post__body h2 + p, .post__body h3 + p { margin-top: .6em; }
+.post__body ul, .post__body ol { color: var(--ink-2); padding-left: 1.35em; }
+.post__body li::marker { color: var(--accent-ink); }
+.post__body a { color: var(--primary); font-weight: 500; text-decoration-color: var(--bugday-300); }
+.post__body a:hover { color: var(--primary-hover); text-decoration-color: var(--accent); }
+.post__body > p:first-child::first-letter {
+  float: left; font-family: var(--font-display); font-weight: 500; font-size: 3.4em; line-height: .82;
+  padding: .1em .14em 0 0; color: var(--accent-ink);
+}
+.post__body blockquote { position: relative; padding-left: calc(var(--space-6) + 10px); }
+.post__body blockquote::before {
+  content: "\201C"; position: absolute; left: 14px; top: 4px; font-size: 3.2rem; line-height: 1; color: var(--bugday-300); font-style: normal;
+}
+.post__body blockquote p { margin: 0; color: var(--ink-2); }
+.post__body blockquote cite { display: block; margin-top: 10px; font-family: var(--font-mono); font-style: normal; font-size: .72rem; letter-spacing: .1em; color: var(--ink-3); }
+.post__body .table-wrap { margin: 1.6em 0; }
+.post__body .spec-table { font-size: .92rem; }
+.post__body .spec-table th { width: 26%; }
+.post__body .spec-table thead th { width: auto; font-family: var(--font-display); font-size: 1.05rem; letter-spacing: 0; color: var(--ink); background: var(--surface-2); }
+.post__body .spec-table td { font-weight: 400; color: var(--ink-2); }
+
+/* Kontrol listesi kutusu */
+.checklist {
+  list-style: none; margin: 1.8em 0; padding: clamp(20px, 3vw, 28px); display: grid; gap: 12px;
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-l); box-shadow: var(--shadow-s);
+}
+.checklist__title {
+  display: flex; align-items: center; gap: 10px; margin: 0 0 4px;
+  font-family: var(--font-mono); font-size: .72rem; font-weight: 500; letter-spacing: .16em; color: var(--ink-3);
+}
+.checklist__title::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex: none; }
+.checklist li { position: relative; padding-left: 34px; margin: 0; font-size: .96rem; line-height: 1.55; color: var(--ink-2); }
+.checklist li.checklist__title { padding-left: 0; }
+.checklist li:not(.checklist__title)::before {
+  content: ""; position: absolute; left: 0; top: 2px; width: 22px; height: 22px; border-radius: 6px;
+  border: 1px solid var(--cimen-300); background: var(--cimen-100) no-repeat center / 13px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231F4D32' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 12 5 5L20 7'/%3E%3C/svg%3E");
+}
+.checklist li strong { color: var(--ink); font-weight: 600; }
+
+/* Uyarı / not kutusu */
+.note {
+  display: flex; gap: 12px; align-items: flex-start; margin: 1.6em 0; padding: 16px 20px; border-radius: var(--radius);
+  background: var(--bugday-100); border: 1px solid var(--bugday-300); color: var(--toprak-700); font-size: .92rem; line-height: 1.6;
+}
+.note .icon { color: var(--accent-ink); flex: none; margin-top: 4px; width: 1.15em; height: 1.15em; }
+.note p { margin: 0; color: inherit; }
+.note strong { color: var(--toprak-900); }
+
+/* ---------- Yazı: alt bölüm (paylaş, yazar, önceki/sonraki) ---------- */
+.post__foot { margin-top: clamp(40px, 6vw, 64px); padding-top: var(--space-6); border-top: 1px dashed var(--kirec-300); display: grid; gap: var(--space-6); }
+.post__share { justify-content: space-between; }
+.post__share .share__label { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .14em; }
+.post__share .cluster { gap: 8px; }
+.post-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.post-nav__link {
+  display: flex; flex-direction: column; gap: 6px; padding: 18px 20px; min-width: 0;
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-l); text-decoration: none; color: var(--ink);
+  transition: transform .25s var(--ease), box-shadow .3s var(--ease), border-color .2s;
+}
+.post-nav__link:hover { transform: translateY(-2px); box-shadow: var(--shadow); border-color: var(--kirec-300); color: var(--ink); }
+.post-nav__link--next { text-align: right; align-items: flex-end; }
+.post-nav__label { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: .68rem; letter-spacing: .14em; color: var(--ink-3); }
+.post-nav__label .icon { width: .9em; height: .9em; }
+.post-nav__title { font-family: var(--font-display); font-size: 1.1rem; line-height: 1.3; text-wrap: balance; }
+@media (max-width: 639.98px) { .post-nav { grid-template-columns: 1fr; } .post-nav__link--next { text-align: left; align-items: flex-start; } }
+
+
+/* ---------- Liste: page-hero okunabilirlik (kontrast düzeltmesi) ---------- */
+.page-hero--blog::before {
+  background: linear-gradient(180deg, rgba(20,48,31,.55) 0%, rgba(20,48,31,.65) 50%, rgba(28,20,16,.88) 100%);
+}
+.page-hero .eyebrow { color: var(--kirec-200); text-shadow: 0 1px 2px rgba(0,0,0,.45); }
+.page-hero .eyebrow::before { background: var(--bugday-300); }
+.page-hero .breadcrumb { color: var(--kirec-100); text-shadow: 0 1px 2px rgba(0,0,0,.45); }
+.page-hero .breadcrumb [aria-current] { opacity: 1; }

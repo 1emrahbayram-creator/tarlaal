@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Göl ve çam ağaçları">
+  <rect width="1200" height="900" fill="#FBF8F2"/>
+  <circle cx="960" cy="220" r="70" fill="#EFD08A"/>
+  <path d="M0 420 L220 240 L400 400 L560 260 L760 420 L920 300 L1200 440 V900 H0Z" fill="#8FBF9F"/>
+  <path d="M0 500 L300 380 L520 500 L800 400 L1200 520 V900 H0Z" fill="#1F4D32"/>
+  <ellipse cx="600" cy="700" rx="520" ry="150" fill="#E3F0E7"/>
+  <g stroke="#8FBF9F" stroke-width="3" fill="none" opacity=".7">
+    <path d="M200 690 Q300 680 400 690 T600 690 T800 690 T1000 690"/>
+    <path d="M260 740 Q360 730 460 740 T660 740 T860 740"/>
+  </g>
+  <g fill="#7A5A3E"><rect x="126" y="640" width="24" height="70"/><rect x="1050" y="640" width="24" height="70"/></g>
+  <g fill="#2F7A4B">
+    <path d="M58 660 L138 480 L218 660 Z"/><path d="M70 590 L138 430 L206 590 Z"/><path d="M84 520 L138 390 L192 520 Z"/>
+    <path d="M982 660 L1062 480 L1142 660 Z"/><path d="M994 590 L1062 430 L1130 590 Z"/><path d="M1008 520 L1062 390 L1116 520 Z"/>
+  </g>
+  <text x="1140" y="860" text-anchor="end" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#1F4D32" opacity=".7">tarlaal</text>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <defs>
+    <clipPath id="fv-clip"><rect x="1" y="1" width="46" height="46" rx="12"/></clipPath>
+  </defs>
+  <g clip-path="url(#fv-clip)">
+    <polygon points="1,1 25,1 23.5,24.5 1,23" fill="#2F7A4B"/>
+    <polygon points="25,1 47,1 47,26 23.5,24.5" fill="#1F4D32"/>
+    <polygon points="1,23 23.5,24.5 22,47 1,47" fill="#1F4D32"/>
+    <polygon points="23.5,24.5 47,26 47,47 22,47" fill="#D9A441"/>
+    <path d="M25 1 L22 47 M1 23 L47 26" stroke="#FBF8F2" stroke-width="2.6" fill="none"/>
+  </g>
+</svg>

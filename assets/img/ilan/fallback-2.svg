@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Tepeler ve ağaç">
+  <rect width="1200" height="900" fill="#F3EEE4"/>
+  <circle cx="260" cy="250" r="90" fill="#EFD08A"/>
+  <path d="M0 520 Q250 330 520 500 T1200 470 V900 H0Z" fill="#8FBF9F"/>
+  <path d="M0 640 Q300 500 650 620 T1200 600 V900 H0Z" fill="#2F7A4B"/>
+  <path d="M0 760 Q350 680 700 760 T1200 740 V900 H0Z" fill="#1F4D32"/>
+  <g stroke="#E3F0E7" stroke-width="2" fill="none" opacity=".5">
+    <path d="M0 580 Q250 420 520 560 T1200 530"/><path d="M0 700 Q300 580 650 690 T1200 670"/>
+  </g>
+  <rect x="842" y="560" width="26" height="130" fill="#7A5A3E"/>
+  <circle cx="855" cy="520" r="110" fill="#1F4D32"/>
+  <circle cx="800" cy="560" r="70" fill="#2F7A4B"/>
+  <circle cx="915" cy="565" r="72" fill="#2F7A4B"/>
+  <text x="1140" y="860" text-anchor="end" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#FBF8F2" opacity=".75">tarlaal</text>
+</svg>

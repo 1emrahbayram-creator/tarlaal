@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Bağ-bahçe sıraları">
+  <rect width="1200" height="900" fill="#FBF8F2"/>
+  <circle cx="200" cy="200" r="80" fill="#D9A441"/>
+  <path d="M0 400 Q600 340 1200 400 V900 H0Z" fill="#B9977A"/>
+  <g stroke="#7A5A3E" stroke-width="4" fill="none" opacity=".6">
+    <path d="M0 480 L1200 470 M0 570 L1200 560 M0 660 L1200 650 M0 750 L1200 740 M0 840 L1200 830"/>
+  </g>
+  <g fill="#2F7A4B">
+    <circle cx="80" cy="440" r="26"/><circle cx="200" cy="438" r="30"/><circle cx="320" cy="436" r="26"/><circle cx="440" cy="434" r="30"/><circle cx="560" cy="432" r="26"/><circle cx="680" cy="432" r="30"/><circle cx="800" cy="434" r="26"/><circle cx="920" cy="436" r="30"/><circle cx="1040" cy="438" r="26"/><circle cx="1160" cy="440" r="30"/>
+    <circle cx="140" cy="530" r="30"/><circle cx="260" cy="528" r="26"/><circle cx="380" cy="526" r="30"/><circle cx="500" cy="524" r="26"/><circle cx="620" cy="522" r="30"/><circle cx="740" cy="522" r="26"/><circle cx="860" cy="524" r="30"/><circle cx="980" cy="526" r="26"/><circle cx="1100" cy="528" r="30"/>
+  </g>
+  <g fill="#1F4D32">
+    <circle cx="80" cy="620" r="32"/><circle cx="200" cy="618" r="36"/><circle cx="320" cy="616" r="32"/><circle cx="440" cy="614" r="36"/><circle cx="560" cy="612" r="32"/><circle cx="680" cy="612" r="36"/><circle cx="800" cy="614" r="32"/><circle cx="920" cy="616" r="36"/><circle cx="1040" cy="618" r="32"/><circle cx="1160" cy="620" r="36"/>
+    <circle cx="140" cy="710" r="38"/><circle cx="260" cy="708" r="34"/><circle cx="380" cy="706" r="38"/><circle cx="500" cy="704" r="34"/><circle cx="620" cy="702" r="38"/><circle cx="740" cy="702" r="34"/><circle cx="860" cy="704" r="38"/><circle cx="980" cy="706" r="34"/><circle cx="1100" cy="708" r="38"/>
+    <circle cx="80" cy="800" r="42"/><circle cx="200" cy="798" r="46"/><circle cx="320" cy="796" r="42"/><circle cx="440" cy="794" r="46"/><circle cx="560" cy="792" r="42"/><circle cx="680" cy="792" r="46"/><circle cx="800" cy="794" r="42"/><circle cx="920" cy="796" r="46"/><circle cx="1040" cy="798" r="42"/><circle cx="1160" cy="800" r="46"/>
+  </g>
+  <text x="1140" y="880" text-anchor="end" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#FBF8F2" opacity=".85">tarlaal</text>
+</svg>

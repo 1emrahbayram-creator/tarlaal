@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Kadastro parsel haritası">
+  <rect width="1200" height="900" fill="#F3EEE4"/>
+  <g stroke="#D3C9B8" stroke-width="1.5" fill="none" opacity=".7">
+    <path d="M0 150 L1200 110 M0 300 L1200 260 M0 450 L1200 410 M0 600 L1200 560 M0 750 L1200 710"/>
+    <path d="M150 0 L190 900 M300 0 L340 900 M450 0 L490 900 M600 0 L640 900 M750 0 L790 900 M900 0 L940 900 M1050 0 L1090 900"/>
+  </g>
+  <g fill="#E3F0E7" stroke="#7A5A3E" stroke-width="3">
+    <path d="M120 180 L430 150 L470 400 L160 420 Z"/>
+    <path d="M430 150 L790 120 L810 370 L470 400 Z"/>
+    <path d="M790 120 L1100 140 L1080 420 L810 370 Z"/>
+    <path d="M160 420 L470 400 L500 700 L200 740 Z"/>
+    <path d="M810 370 L1080 420 L1050 720 L830 700 Z"/>
+  </g>
+  <path d="M470 400 L810 370 L830 700 L500 700 Z" fill="#D9A441" stroke="#7A5A3E" stroke-width="3"/>
+  <g stroke="#7A5A3E" stroke-width="7" fill="none" stroke-linecap="round" opacity=".8">
+    <path d="M60 800 Q400 760 650 780 T1160 760"/>
+  </g>
+  <g font-family="ui-monospace, 'IBM Plex Mono', monospace" font-size="30" fill="#4A3528">
+    <text x="270" y="300">142/3</text><text x="600" y="270">142/4</text><text x="920" y="290">142/5</text>
+    <text x="300" y="580">142/8</text><text x="900" y="560">142/10</text>
+  </g>
+  <text x="660" y="560" text-anchor="middle" font-family="ui-monospace, 'IBM Plex Mono', monospace" font-size="40" font-weight="500" fill="#1C1410">142 / 9</text>
+  <text x="1140" y="860" text-anchor="end" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#1F4D32" opacity=".7">tarlaal</text>
+</svg>

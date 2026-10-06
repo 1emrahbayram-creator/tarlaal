@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="tr" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sıkça Sorulan Sorular | Tarlaal</title>
+  <meta name="description" content="Arsa, tarla ve arazi alım satımında en çok sorulan sorular: tapu, imar, hisseli tapu, taksit, kaparo ve satış süreci. Danışmanlarımızdan net, sade cevaplar.">
+  <link rel="canonical" href="https://tarlaal.com/sss.html">
+  <meta property="og:title" content="Sıkça Sorulan Sorular | Tarlaal">
+  <meta property="og:description" content="Arsa, tarla ve arazi alım satımında en çok sorulan sorular: tapu, imar, hisseli tapu, taksit, kaparo ve satış süreci. Danışmanlarımızdan net, sade cevaplar.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tarlaal.com/sss.html">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1533460004989-cef01064af7e?auto=format&fit=crop&w=1200&q=70">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:site_name" content="Tarlaal">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300..800;1,300..800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* sss.html — sayfaya özel */
+    .faq-tools { display: flex; flex-direction: column; gap: var(--space-4); margin-bottom: clamp(24px, 4vw, 40px); }
+    .faq-tabs { display: flex; flex-wrap: wrap; gap: 8px; }
+    .faq-tabs .chip { padding: 9px 14px; border-radius: 999px; font-size: .88rem; cursor: pointer; transition: background .2s, color .2s, border-color .2s; }
+    .faq-tabs .chip__count { font-family: var(--font-mono); font-size: .72rem; color: var(--ink-3); }
+    .faq-tabs .chip.is-active .chip__count { color: var(--bugday-300); }
+    .faq-search { position: relative; max-width: 520px; }
+    .faq-search .icon { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--ink-3); pointer-events: none; }
+    .faq-search .input { padding-left: 42px; }
+    .faq-group + .faq-group { margin-top: clamp(32px, 5vw, 56px); }
+    .faq-group__head { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: var(--space-3); }
+    .faq-group__head h2 { font-size: clamp(1.4rem, 2.4vw, 1.9rem); margin: 0; }
+    .faq-group__head .mono { color: var(--ink-3); }
+    .faq-group__desc { color: var(--ink-2); font-size: .95rem; margin: 0 0 var(--space-4); max-width: 60ch; }
+    .faq-sidebar .contact-card + .contact-card { margin-top: var(--space-4); }
+    .faq-sidebar .contact-card .icon { color: var(--cimen-500); }
+    .faq-sidebar .contact-card__row { display: flex; align-items: center; gap: 10px; }
+    .faq-sidebar .contact-card__row .icon { flex: none; }
+    .faq-sidebar .contact-card--green { background: var(--cimen-900); color: var(--ink-inverse); border-color: var(--cimen-900); }
+    .faq-sidebar .contact-card--green .contact-card__title { color: var(--ink-inverse); }
+    .faq-sidebar .contact-card--green p { color: var(--kirec-300); }
+    .faq-sidebar .contact-card--green .icon { color: var(--bugday-300); }
+    .faq-sidebar .contact-card--green a:not(.btn) { color: var(--bugday-300); }
+    .faq-sidebar .contact-card__hours { font-family: var(--font-mono); font-size: .74rem; letter-spacing: .04em; color: var(--ink-3); }
+    .faq-sidebar .contact-card--green .contact-card__hours { color: var(--kirec-300); }
+    .faq-toc { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+    .faq-toc a { display: flex; justify-content: space-between; gap: 10px; padding: 8px 10px; border-radius: 8px; text-decoration: none; color: var(--ink-2); font-size: .92rem; }
+    .faq-toc a:hover { background: var(--surface-2); color: var(--ink); }
+    .faq-toc .mono { color: var(--ink-3); }
+    .faq-group .faq + .faq--extra { margin-top: 10px; }
+    .faq-empty[hidden] { display: none !important; }
+    @media (min-width: 900px) { .faq-sidebar { position: sticky; top: calc(var(--nav-h) + 24px); } }
+  </style>
+</head>
+<body>
+<!-- @header -->
+<a class="skip-link" href="#icerik">İçeriğe atla</a>
+<header class="site-header" id="site-header">
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <p class="topbar__note"><span class="topbar__dot" aria-hidden="true"></span>Bankalar Caddesi, Kartal / İstanbul <span class="topbar__sep" aria-hidden="true">·</span> Hafta içi 09.00–18.30, Cumartesi 10.00–16.00</p>
+      <ul class="topbar__links">
+        <li><a href="tel:+905423700808" data-site-href="telefonHref"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span data-site="telefon">+90 542 370 08 08</span></a></li>
+        <li><a href="https://wa.me/905423700808" data-site-href="whatsappHref" target="_blank" rel="noopener"><svg class="icon icon--fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.9 11.9 0 0 0 12 0C5.5 0 .2 5.3.2 11.8c0 2.1.5 4.1 1.6 5.9L0 24l6.5-1.7a11.8 11.8 0 0 0 5.5 1.4c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.1-3.3-8.4zM12 21.7c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.8 1 1-3.7-.2-.4A9.8 9.8 0 0 1 2.2 11.8C2.2 6.4 6.6 2 12 2c2.6 0 5.1 1 6.9 2.9a9.7 9.7 0 0 1 2.9 6.9c0 5.4-4.4 9.9-9.8 9.9zm5.4-7.3c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1l-.9 1.2c-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4z"/></svg>WhatsApp</a></li>
+        <li><a href="mailto:info@tarlaal.com" data-site-href="epostaHref"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="m22 6-10 7L2 6"/></svg><span data-site="eposta">info@tarlaal.com</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="navbar">
+    <div class="container navbar__inner">
+      <a class="brand" href="index.html" aria-label="Tarlaal — ana sayfa">
+        <svg class="brand__mark" viewBox="0 0 48 48" width="44" height="44" aria-hidden="true" focusable="false">
+          <defs><clipPath id="hdr-mark-clip"><rect x="2" y="2" width="44" height="44" rx="11"/></clipPath></defs>
+          <g clip-path="url(#hdr-mark-clip)">
+            <polygon points="2,2 25,2 23.5,24.5 2,23" fill="#2F7A4B"/>
+            <polygon points="25,2 46,2 46,26 23.5,24.5" fill="#1F4D32"/>
+            <polygon points="2,23 23.5,24.5 22,46 2,46" fill="#1F4D32"/>
+            <polygon points="23.5,24.5 46,26 46,46 22,46" fill="#D9A441"/>
+            <path d="M25 2 L22 46 M2 23 L46 26" stroke="#FBF8F2" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+          </g>
+        </svg>
+        <span class="brand__text">
+          <span class="brand__name">tarla<b>al</b></span>
+          <span class="brand__tag">ARSA · TARLA · ARAZİ</span>
+        </span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Ana menü">
+        <ul class="nav__list">
+          <li><a href="index.html">Ana Sayfa</a></li>
+          <li class="has-sub">
+            <a href="ilanlar.html">İlanlar</a>
+            <button class="sub-toggle" type="button" aria-expanded="false" aria-label="İlanlar alt menüsünü aç">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <ul class="sub">
+              <li><a href="ilanlar.html">Tüm İlanlar</a></li>
+              <li><a href="ilanlar.html?tur=tarla">Satılık Tarla</a></li>
+              <li><a href="ilanlar.html?tur=arsa">Satılık Arsa</a></li>
+              <li><a href="ilanlar.html?tur=arazi">Satılık Arazi</a></li>
+              <li><a href="ilanlar.html?tur=bahce">Bağ &amp; Bahçe</a></li>
+              <li><a href="ilanlar.html#bolgeler">Bölgelere Göre</a></li>
+            </ul>
+          </li>
+          <li><a href="arazinizi-satin.html">Arazinizi Satın</a></li>
+          <li><a href="hakkimizda.html">Hakkımızda</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="sss.html">SSS</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+        <div class="nav__mobile-extra">
+          <a class="btn btn--ghost btn--block" href="tel:+905423700808" data-site-href="telefonHref"><span data-site="telefon">+90 542 370 08 08</span></a>
+          <a class="btn btn--primary btn--block" href="arazinizi-satin.html">Arazinizi Satın</a>
+        </div>
+      </nav>
+      <div class="navbar__actions">
+        <a class="btn btn--ghost btn--sm navbar__phone" href="tel:+905423700808" data-site-href="telefonHref">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+          <span data-site="telefon">+90 542 370 08 08</span>
+        </a>
+        <a class="btn btn--primary btn--sm navbar__cta" href="arazinizi-satin.html">Arazinizi Satın</a>
+        <button class="nav-toggle" type="button" aria-controls="nav" aria-expanded="false">
+          <span class="nav-toggle__bars" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="nav-toggle__label">Menü</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- @/header -->
+<main id="icerik">
+  <div class="container">
+    <section class="page-hero" aria-labelledby="sayfa-baslik">
+      <img class="page-hero__bg" src="https://images.unsplash.com/photo-1533460004989-cef01064af7e?auto=format&fit=crop&w=1200&q=70" alt="Sabah ışığında çim yakın plan" width="1200" height="675" decoding="async" onerror="this.onerror=null;this.src='assets/img/ilan/fallback-2.svg'">
+      <div class="page-hero__content">
+        <ol class="breadcrumb" aria-label="Sayfa yolu">
+          <li><a href="index.html">Ana Sayfa</a></li>
+          <li><span aria-current="page">SSS</span></li>
+        </ol>
+        <h1 class="page-hero__title" id="sayfa-baslik">Sıkça sorulan <em class="em-accent">sorular</em></h1>
+        <p class="lead">Tapu, imar, taksit, kaparo, satış süreci… Müşterilerimizin bize en çok sorduğu soruları, danışmanlarımızın verdiği cevaplarla bir araya getirdik.</p>
+      </div>
+      <svg class="page-hero__mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+        <polygon points="2,2 25,2 23.5,24.5 2,23" fill="#FBF8F2"/>
+        <polygon points="25,2 46,2 46,26 23.5,24.5" fill="#FBF8F2" opacity=".7"/>
+        <polygon points="2,23 23.5,24.5 22,46 2,46" fill="#FBF8F2" opacity=".7"/>
+        <polygon points="23.5,24.5 46,26 46,46 22,46" fill="#D9A441"/>
+        <path d="M25 2 L22 46 M2 23 L46 26" stroke="#14301F" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+      </svg>
+    </section>
+  </div>
+
+  <section class="section section--tight" aria-label="Sorular ve cevaplar">
+    <div class="container">
+      <div class="grid grid--sidebar">
+        <div>
+          <div class="faq-tools reveal">
+            <div class="faq-tabs" role="group" aria-label="Kategoriye göre süz" id="faq-tabs">
+              <button class="chip is-active" type="button" data-kat="" aria-pressed="true">Tümü <span class="chip__count" data-kat-count=""></span></button>
+              <button class="chip" type="button" data-kat="Satın alma" aria-pressed="false">Satın alma <span class="chip__count" data-kat-count="Satın alma"></span></button>
+              <button class="chip" type="button" data-kat="Satış" aria-pressed="false">Satış <span class="chip__count" data-kat-count="Satış"></span></button>
+              <button class="chip" type="button" data-kat="Tapu & İmar" aria-pressed="false">Tapu &amp; İmar <span class="chip__count" data-kat-count="Tapu & İmar"></span></button>
+              <button class="chip" type="button" data-kat="Ödeme" aria-pressed="false">Ödeme <span class="chip__count" data-kat-count="Ödeme"></span></button>
+            </div>
+            <div class="faq-search">
+              <label class="visually-hidden" for="faq-ara">Sorularda ara</label>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input class="input" id="faq-ara" type="search" placeholder="Soru ara: tapu, taksit, imar…" autocomplete="off">
+            </div>
+            <p class="muted small" id="faq-durum" aria-live="polite"></p>
+          </div>
+
+          <div id="faq-groups">
+            <section class="faq-group reveal" id="satin-alma" data-kat="Satın alma">
+              <div class="faq-group__head">
+                <h2>Satın alma</h2>
+                <span class="mono">01</span>
+              </div>
+              <p class="faq-group__desc">İlan seçiminden yerinde gösterime, belge kontrolünden tapu devrine kadar alıcıların en çok merak ettikleri.</p>
+              <div class="faq" data-render="sss" data-kategori="Satın alma"></div>
+              <div class="faq faq--extra">
+                <details class="faq__item">
+                  <summary>Yabancı uyruklular Türkiye'de arsa ya da tarla alabilir mi?</summary>
+                  <div class="faq__body"><p>Evet; Tapu Kanunu'nun 35. maddesi kapsamında, vatandaşı olduğu ülkeye göre belirlenen sınırlar içinde mümkündür. Askerî yasak ve güvenlik bölgeleri dışında kalan parsellerde, kişi başına ülke genelinde 30 hektarı aşmamak koşuluyla alım yapılabilir.</p><p>Yabancı alıcılarda tapu müdürlüğü ek sorgular yapar ve süreç birkaç hafta uzayabilir. Hangi belgelerin gerektiğini ve parselin bu kapsama girip girmediğini teklif aşamasında birlikte netleştiriyoruz.</p></div>
+                </details>
+                <details class="faq__item">
+                  <summary>Satın almadan önce ekspertiz (değerleme) raporu alıyor musunuz?</summary>
+                  <div class="faq__body"><p>Talep ettiğinizde, SPK lisanslı bağımsız bir değerleme kuruluşundan rapor aldırıyoruz. Rapor ücreti değerleme kuruluşuna ödenir ve genellikle alıcıya aittir; banka kredisi kullanacaksanız zaten zorunludur.</p><p>Rapor olmadan da, parselin emsal satışlarını ve bölgedeki m² fiyat aralığını yazılı olarak paylaşıyoruz. Baskı yok; karşılaştırıp karar vermeniz için zaman tanıyoruz.</p></div>
+                </details>
+                <details class="faq__item">
+                  <summary>İlanlardaki fiyatlar pazarlığa açık mı?</summary>
+                  <div class="faq__body"><p>İlan fiyatları, parselin tapu ve imar durumu ile bölge emsallerine göre belirlenmiş liste fiyatlarıdır. Peşin ödemede ya da birden fazla parsel alımında yazılı teklifinizi değerlendiririz; sözlü vaat yerine her teklife yazılı cevap veririz.</p></div>
+                </details>
+              </div>
+            </section>
+
+            <section class="faq-group reveal" id="satis" data-kat="Satış">
+              <div class="faq-group__head">
+                <h2>Satış</h2>
+                <span class="mono">02</span>
+              </div>
+              <p class="faq-group__desc">Elinizdeki tarlayı, arsayı ya da araziyi doğrudan bize satmak isteyenler için süreç, masraf ve değerleme soruları.</p>
+              <div class="faq" data-render="sss" data-kategori="Satış"></div>
+              <div class="faq faq--extra">
+                <details class="faq__item">
+                  <summary>Vekâletle satış mümkün mü?</summary>
+                  <div class="faq__body"><p>Evet. Noterden düzenlenmiş, parselin ada/parsel bilgisi ve "satış" yetkisi açıkça yazılı, fotoğraflı özel vekâletname ile tapu devri yapılabilir. Genel nitelikli vekâletnameler tapu müdürlüğünce kabul edilmeyebilir.</p><p>Yurt dışındaysanız vekâletnameyi T.C. konsolosluğunda düzenletebilirsiniz. Vekâletname metnini tapu işleminden önce bizimle paylaşırsanız eksik yetki yüzünden randevu kaybetmezsiniz.</p></div>
+                </details>
+                <details class="faq__item">
+                  <summary>Arazim Marmara dışında; yine de alıyor musunuz?</summary>
+                  <div class="faq__body"><p>Saha ekibimiz dokuz Marmara ilinde çalışıyor ve kesin teklifi yerinde inceleme sonrası veriyoruz. Diğer illerdeki parselleri dosya bazında değerlendiriyoruz: tapu bilgilerinizi gönderin, uygun bulursak yerinde inceleme planlayıp dönüş yaparız; uygun değilse bunu da açıkça söyleriz.</p></div>
+                </details>
+              </div>
+            </section>
+
+            <section class="faq-group reveal" id="tapu-imar" data-kat="Tapu & İmar">
+              <div class="faq-group__head">
+                <h2>Tapu &amp; İmar</h2>
+                <span class="mono">03</span>
+              </div>
+              <p class="faq-group__desc">Tarla–arsa farkı, hisseli tapu, imar durumu belgesi ve kadastro gibi teknik konularda sade açıklamalar.</p>
+              <div class="faq" data-render="sss" data-kategori="Tapu & İmar"></div>
+              <div class="faq faq--extra">
+                <details class="faq__item">
+                  <summary>Kadastro çapı nedir, nereden alınır?</summary>
+                  <div class="faq__body"><p>Kadastro çapı (çap belgesi), parselin kadastro paftasındaki sınırlarını, komşu parsellerini ve ölçülerini gösteren resmî krokidir. Tapu senedi mülkiyeti, çap ise parselin yerde nerede olduğunu anlatır.</p><p>İlgili Kadastro Müdürlüğü'nden ya da e-Devlet üzerinden alınabilir. Yerinde gösterimde sınırları bu çap üzerinden birlikte kontrol ediyoruz; gerekirse lisanslı harita mühendisiyle aplikasyon yaptırılır.</p></div>
+                </details>
+                <details class="faq__item">
+                  <summary>Takyidat nedir, neden önemli?</summary>
+                  <div class="faq__body"><p>Takyidat, tapu kaydındaki şerh, beyan, ipotek, haciz ve irtifak gibi kısıtlamaların tamamıdır. Bir parsel satışta görünse bile üzerinde haciz ya da ipotek varsa devir yapılamaz ya da borç size geçebilir.</p><p>Satış öncesi güncel takyidat sorgusunu paylaşıyor, tapu günü tekrar kontrol ediyoruz. Siz de e-Devlet "Tapu Bilgileri Sorgulama" hizmetinden kendi adınıza kayıtlı parselleri görebilirsiniz.</p></div>
+                </details>
+              </div>
+            </section>
+
+            <section class="faq-group reveal" id="odeme" data-kat="Ödeme">
+              <div class="faq-group__head">
+                <h2>Ödeme</h2>
+                <span class="mono">04</span>
+              </div>
+              <p class="faq-group__desc">Taksit seçenekleri, kaparo, tapu harcı ve masraf paylaşımı hakkında bilmeniz gerekenler.</p>
+              <div class="faq" data-render="sss" data-kategori="Ödeme"></div>
+              <div class="faq faq--extra">
+                <details class="faq__item">
+                  <summary>Banka kredisi kullanabilir miyim?</summary>
+                  <div class="faq__body"><p>İmarlı arsalarda bankalar, değerleme raporu üzerinden "arsa kredisi" verebiliyor; vade ve faiz konut kredisinden farklıdır ve genellikle değerin %50–70'i kadar kredi çıkar. Tarla vasıflı parsellere çoğu banka kredi vermez.</p><p>Kredi kullanamadığınız parsellerde Taksit İmkânı rozetli ilanlarımız alternatif olabilir. Hangi yolun size uyduğunu, bankadan ön onay almadan önce birlikte hesaplayabiliriz.</p></div>
+                </details>
+              </div>
+            </section>
+          </div>
+
+          <div class="empty faq-empty mt-5" id="faq-bos" hidden>
+            <h3>Bu aramaya uyan soru bulamadık.</h3>
+            <p>Farklı bir kelime deneyin ya da sorunuzu bize doğrudan iletin; genellikle aynı gün içinde dönüş yapıyoruz.</p>
+            <div class="cluster mt-4" style="justify-content:center">
+              <a class="btn btn--primary btn--sm" href="iletisim.html">Soru sorun</a>
+              <a class="btn btn--ghost btn--sm" href="https://wa.me/905423700808" data-site-href="whatsappHref" target="_blank" rel="noopener">WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <aside class="faq-sidebar reveal reveal--delay-1" aria-label="Yardım ve iletişim">
+          <div class="contact-card">
+            <h2 class="contact-card__title">Konu başlıkları</h2>
+            <ul class="faq-toc">
+              <li><a href="#satin-alma"><span>Satın alma</span><span class="mono" data-kat-count="Satın alma"></span></a></li>
+              <li><a href="#satis"><span>Satış</span><span class="mono" data-kat-count="Satış"></span></a></li>
+              <li><a href="#tapu-imar"><span>Tapu &amp; İmar</span><span class="mono" data-kat-count="Tapu & İmar"></span></a></li>
+              <li><a href="#odeme"><span>Ödeme</span><span class="mono" data-kat-count="Ödeme"></span></a></li>
+            </ul>
+          </div>
+          <div class="contact-card contact-card--green grain">
+            <h2 class="contact-card__title">Hâlâ sorunuz mu var?</h2>
+            <p>Sorunuz listede yoksa bir danışmanımız cevaplasın. Baskı yok, satış konuşması yok; yalnızca gerçekleri konuşuruz.</p>
+            <div class="contact-card__row">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+              <a href="tel:+905423700808" data-site-href="telefonHref"><span data-site="telefon">+90 542 370 08 08</span></a>
+            </div>
+            <div class="contact-card__row">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="m22 6-10 7L2 6"/></svg>
+              <a href="mailto:info@tarlaal.com" data-site-href="epostaHref"><span data-site="eposta">info@tarlaal.com</span></a>
+            </div>
+            <p class="contact-card__hours" data-site="saatler">Hafta içi 09.00–18.30 · Cumartesi 10.00–16.00</p>
+            <a class="btn btn--accent btn--block" href="https://wa.me/905423700808" data-site-href="whatsappHref" target="_blank" rel="noopener">WhatsApp'tan sorun</a>
+            <a class="btn btn--light btn--block btn--sm" href="iletisim.html">İletişim formu</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper" aria-labelledby="rehber-baslik">
+    <div class="container">
+      <div class="section__head reveal">
+        <div>
+          <p class="eyebrow">Rehber</p>
+          <h2 id="rehber-baslik">Daha uzun <em class="em-accent">cevaplar</em> için</h2>
+          <p class="lead">Kısa cevapların yetmediği konuları blogda adım adım anlatıyoruz.</p>
+        </div>
+        <a class="btn btn--ghost" href="blog.html">Tüm yazılar</a>
+      </div>
+      <div class="grid grid--3" data-render="blog" data-limit="3"></div>
+    </div>
+  </section>
+
+  <section class="section section--tight" aria-label="Arazinizi satın">
+    <div class="container">
+      <div class="cta-band parcel-lines reveal">
+        <div class="cta-band__text">
+          <p class="eyebrow">Biz alalım</p>
+          <h2>Elinizde satmak istediğiniz bir <em class="em-accent">tarla</em> mı var?</h2>
+          <p>Tapu bilgilerinizi iletin; 48 saat içinde komisyonsuz bir ön değerleme yapalım.</p>
+        </div>
+        <div class="cta-band__actions">
+          <a class="btn btn--accent btn--lg" href="arazinizi-satin.html">Arazinizi Satın</a>
+          <a class="btn btn--light btn--lg" href="tel:+905423700808" data-site-href="telefonHref">Hemen arayın</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<!-- @footer -->
+<footer class="site-footer grain" id="site-footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a class="brand brand--light" href="index.html" aria-label="Tarlaal — ana sayfa">
+          <svg class="brand__mark" viewBox="0 0 48 48" width="44" height="44" aria-hidden="true" focusable="false">
+            <defs><clipPath id="ftr-mark-clip"><rect x="2" y="2" width="44" height="44" rx="11"/></clipPath></defs>
+            <g clip-path="url(#ftr-mark-clip)">
+              <polygon points="2,2 25,2 23.5,24.5 2,23" fill="#3E9A60"/>
+              <polygon points="25,2 46,2 46,26 23.5,24.5" fill="#2F7A4B"/>
+              <polygon points="2,23 23.5,24.5 22,46 2,46" fill="#2F7A4B"/>
+              <polygon points="23.5,24.5 46,26 46,46 22,46" fill="#D9A441"/>
+              <path d="M25 2 L22 46 M2 23 L46 26" stroke="#1C1410" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+            </g>
+          </svg>
+          <span class="brand__text">
+            <span class="brand__name">tarla<b>al</b></span>
+            <span class="brand__tag">ARSA · TARLA · ARAZİ</span>
+          </span>
+        </a>
+        <p class="footer__desc">2014'ten beri Marmara'da arsa, tarla ve arazi alım satımında yanınızdayız. Tapu ve imar kontrolü yapılmış, yerinde gösterilen portföy; satmak isteyenler için 48 saatte ön değerleme.</p>
+        <ul class="social" aria-label="Sosyal medya">
+          <li><a href="https://instagram.com/tarlaal" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></li>
+          <li><a href="https://facebook.com/tarlaal" target="_blank" rel="noopener" aria-label="Facebook"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a></li>
+          <li><a href="https://youtube.com/@tarlaal" target="_blank" rel="noopener" aria-label="YouTube"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.5 6.4a2.8 2.8 0 0 0-2-2C18.8 4 12 4 12 4s-6.8 0-8.5.4a2.8 2.8 0 0 0-2 2A29 29 0 0 0 1 12a29 29 0 0 0 .5 5.6 2.8 2.8 0 0 0 2 2c1.7.4 8.5.4 8.5.4s6.8 0 8.5-.4a2.8 2.8 0 0 0 2-2A29 29 0 0 0 23 12a29 29 0 0 0-.5-5.6z"/><path d="m9.8 15.5 5.7-3.5-5.7-3.5z" fill="currentColor" stroke="none"/></svg></a></li>
+          <li><a href="https://linkedin.com/company/tarlaal" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></li>
+          <li><a href="https://x.com/tarlaal" target="_blank" rel="noopener" aria-label="X"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4l16 16M20 4 4 20"/></svg></a></li>
+        </ul>
+      </div>
+      <nav class="footer__col" aria-label="Kurumsal bağlantılar">
+        <h3 class="footer__title">Kurumsal</h3>
+        <ul class="footer__links">
+          <li><a href="hakkimizda.html">Hakkımızda</a></li>
+          <li><a href="arazinizi-satin.html">Arazinizi Satın</a></li>
+          <li><a href="blog.html">Blog &amp; Rehber</a></li>
+          <li><a href="sss.html">Sıkça Sorulan Sorular</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+      </nav>
+      <nav class="footer__col" aria-label="İlan bağlantıları">
+        <h3 class="footer__title">İlanlar</h3>
+        <ul class="footer__links">
+          <li><a href="ilanlar.html">Tüm İlanlar</a></li>
+          <li><a href="ilanlar.html?tur=tarla">Satılık Tarla</a></li>
+          <li><a href="ilanlar.html?tur=arsa">Satılık Arsa</a></li>
+          <li><a href="ilanlar.html?tur=arazi">Satılık Arazi</a></li>
+          <li><a href="ilanlar.html?il=İstanbul">İstanbul İlanları</a></li>
+          <li><a href="ilanlar.html?il=Tekirdağ">Tekirdağ İlanları</a></li>
+          <li><a href="ilanlar.html?il=Kırklareli">Kırklareli İlanları</a></li>
+        </ul>
+      </nav>
+      <div class="footer__col">
+        <h3 class="footer__title">İletişim</h3>
+        <ul class="footer__contact">
+          <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span data-site="adres">Bankalar Caddesi, Kartal / İstanbul</span></li>
+          <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><a href="tel:+905423700808" data-site-href="telefonHref"><span data-site="telefon">+90 542 370 08 08</span></a></li>
+          <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="m22 6-10 7L2 6"/></svg><a href="mailto:info@tarlaal.com" data-site-href="epostaHref"><span data-site="eposta">info@tarlaal.com</span></a></li>
+          <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span data-site="saatler">Hafta içi 09.00–18.30 · Cumartesi 10.00–16.00</span></li>
+        </ul>
+        <a class="btn btn--accent btn--sm mt-3" href="https://wa.me/905423700808" data-site-href="whatsappHref" target="_blank" rel="noopener">WhatsApp'tan yazın</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© <span data-year>2026</span> Tarlaal Gayrimenkul. Tüm hakları saklıdır.</p>
+      <ul class="footer__legal">
+        <li><a href="kvkk.html">KVKK Aydınlatma Metni</a></li>
+        <li><a href="gizlilik-politikasi.html">Gizlilik Politikası</a></li>
+        <li><a href="cerez-politikasi.html">Çerez Politikası</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/905423700808" data-site-href="whatsappHref" target="_blank" rel="noopener" aria-label="WhatsApp ile yazın">
+  <svg class="icon icon--fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.9 11.9 0 0 0 12 0C5.5 0 .2 5.3.2 11.8c0 2.1.5 4.1 1.6 5.9L0 24l6.5-1.7a11.8 11.8 0 0 0 5.5 1.4c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.1-3.3-8.4zM12 21.7c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.8 1 1-3.7-.2-.4A9.8 9.8 0 0 1 2.2 11.8C2.2 6.4 6.6 2 12 2c2.6 0 5.1 1 6.9 2.9a9.7 9.7 0 0 1 2.9 6.9c0 5.4-4.4 9.9-9.8 9.9zm5.4-7.3c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1l-.9 1.2c-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4z"/></svg>
+  <span class="wa-float__label">WhatsApp</span>
+</a>
+<button class="to-top" type="button" aria-label="Yukarı çık" hidden>
+  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg>
+</button>
+
+<div class="cookie-bar" id="cookie-bar" role="region" aria-label="Çerez tercihleri" hidden>
+  <p><strong>Çerez tercihleri.</strong> Deneyiminizi iyileştirmek ve trafiği analiz etmek için çerezler kullanıyoruz. Zorunlu çerezler her zaman etkindir. <a href="cerez-politikasi.html">Çerez Politikası</a></p>
+  <div class="cookie-bar__actions">
+    <button class="btn btn--sm btn--ghost" type="button" data-cookie="essential">Yalnızca Zorunlu</button>
+    <button class="btn btn--sm btn--primary" type="button" data-cookie="all">Tümünü Kabul Et</button>
+  </div>
+</div>
+<!-- @/footer -->
+<script src="assets/js/config.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+/* sss.html — kategori süzme, arama, sayaçlar, FAQPage JSON-LD */
+(function () {
+  'use strict';
+  function run() {
+  var T = window.TARLAAL; if (!T) return;
+  /* veri main.js tarafından basılır; sayaçlar ve JSON-LD DOM üzerinden okunur */
+  var tabs = document.getElementById('faq-tabs');
+  var input = document.getElementById('faq-ara');
+  var durum = document.getElementById('faq-durum');
+  var bos = document.getElementById('faq-bos');
+  var groups = Array.prototype.slice.call(document.querySelectorAll('.faq-group'));
+  var aktifKat = '';
+
+  /* kategori sayıları: data.js'den basılan + sayfaya elle eklenen (.faq--extra) tüm .faq__item'lar */
+  var sayilar = {}, toplamSoru = 0;
+  groups.forEach(function (g) {
+    var n = g.querySelectorAll('.faq__item').length;
+    sayilar[g.getAttribute('data-kat')] = n; toplamSoru += n;
+  });
+  Array.prototype.slice.call(document.querySelectorAll('[data-kat-count]')).forEach(function (el) {
+    var k = el.getAttribute('data-kat-count');
+    el.textContent = k ? (sayilar[k] || 0) : toplamSoru;
+  });
+
+  /* Bir grupta tek soru açık kalsın (main.js bunu .faq kapsayıcısı bazında yapar; grupta iki kapsayıcı var) */
+  document.getElementById('faq-groups').addEventListener('toggle', function (e) {
+    var det = e.target; if (!det.open || !det.matches('details.faq__item')) return;
+    var g = det.closest('.faq-group'); if (!g) return;
+    Array.prototype.slice.call(g.querySelectorAll('details.faq__item[open]')).forEach(function (o) { if (o !== det) o.open = false; });
+  }, true);
+
+  function norm(s) { return String(s || '').toLocaleLowerCase('tr').replace(/\s+/g, ' ').trim(); }
+
+  function uygula() {
+    var q = norm(input.value);
+    var toplam = 0;
+    groups.forEach(function (g) {
+      var kat = g.getAttribute('data-kat');
+      var items = Array.prototype.slice.call(g.querySelectorAll('.faq__item'));
+      var gorunen = 0;
+      items.forEach(function (it) {
+        var ok = (!aktifKat || aktifKat === kat) && (!q || norm(it.textContent).indexOf(q) !== -1);
+        it.hidden = !ok;
+        if (ok) gorunen++; else it.open = false;
+      });
+      g.hidden = gorunen === 0;
+      toplam += gorunen;
+    });
+    bos.hidden = toplam > 0;
+    if (q) durum.textContent = toplam ? toplam + ' soru "' + input.value.trim() + '" ile eşleşti.' : '';
+    else if (aktifKat) durum.textContent = aktifKat + ' başlığında ' + toplam + ' soru.';
+    else durum.textContent = toplamSoru + ' soru, 4 başlık. Bir başlığa tıklayarak daraltabilir ya da arama yapabilirsiniz.';
+  }
+
+  function secKat(kat, scroll) {
+    aktifKat = kat || '';
+    Array.prototype.slice.call(tabs.querySelectorAll('.chip')).forEach(function (b) {
+      var on = b.getAttribute('data-kat') === aktifKat;
+      b.classList.toggle('is-active', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    uygula();
+    var slug = aktifKat ? T.slug(aktifKat) : null;
+    T.setQuery({ kategori: slug }, { replace: true, hash: '' });
+    if (scroll) {
+      var g = document.getElementById('faq-groups');
+      var top = g.getBoundingClientRect().top + window.scrollY - 110;
+      if (window.scrollY > top) window.scrollTo({ top: top, behavior: 'smooth' });
+    }
+  }
+
+  tabs.addEventListener('click', function (e) {
+    var b = e.target.closest('.chip'); if (!b) return;
+    secKat(b.getAttribute('data-kat'), true);
+  });
+  input.addEventListener('input', uygula);
+  input.addEventListener('keydown', function (e) { if (e.key === 'Escape') { input.value = ''; uygula(); } });
+
+  /* Sol listedeki kategori bağlantıları: "Tümü"ye dönüp ilgili bölüme kaydır */
+  Array.prototype.slice.call(document.querySelectorAll('.faq-toc a')).forEach(function (a) {
+    a.addEventListener('click', function () {
+      if (aktifKat) secKat('', false);
+      if (input.value) { input.value = ''; uygula(); }
+    });
+  });
+
+  /* URL: ?kategori=odeme ya da #odeme */
+  var baslangic = T.getQuery().get('kategori') || (location.hash || '').replace('#', '');
+  if (baslangic) {
+    var hit = groups.filter(function (g) { return T.slug(g.getAttribute('data-kat')) === baslangic || g.id === baslangic; })[0];
+    if (hit && T.getQuery().get('kategori')) secKat(hit.getAttribute('data-kat'), false);
+    else uygula();
+  } else {
+    uygula();
+  }
+
+  /* Soru sayısı 0 olan grup (veri eksikse) gizlenir */
+  groups.forEach(function (g) { if (!g.querySelector('.faq__item')) g.hidden = true; });
+
+  /* FAQPage yapısal verisi */
+  try {
+    var ld = {
+      '@context': 'https://schema.org', '@type': 'FAQPage',
+      mainEntity: Array.prototype.slice.call(document.querySelectorAll('#faq-groups .faq__item')).map(function (it) {
+        var q = it.querySelector('summary'), a = it.querySelector('.faq__body');
+        return { '@type': 'Question', name: (q ? q.textContent : '').trim(), acceptedAnswer: { '@type': 'Answer', text: Array.prototype.map.call(a ? a.querySelectorAll('p') : [], function (x) { return x.textContent.replace(/\s+/g, ' ').trim(); }).join(' ') } };
+      })
+    };
+    var sc = document.createElement('script'); sc.type = 'application/ld+json'; sc.text = JSON.stringify(ld);
+    document.head.appendChild(sc);
+  } catch (e) { /* yoksay */ }
+  }
+  /* main.js'in data-render çıktısından sonra çalışmalı */
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run); else run();
+})();
+</script>
+</body>
+</html>

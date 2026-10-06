@@ -1,0 +1,142 @@
+/* ==========================================================================
+   Tarlaal — Arazinizi Satın sayfası (arazinizi-satin.css)
+   Yalnızca bu sayfaya özel ekler; tokenlar ve bileşenler style.css'ten gelir.
+   ========================================================================== */
+
+/* Banner: satıcı CTA'ları */
+.page-hero--sell .page-hero__content { max-width: 780px; }
+.page-hero--sell .lead { max-width: 60ch; }
+.page-hero__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: var(--space-5); }
+.page-hero--sell .eyebrow { color: var(--bugday-300); }
+.page-hero--sell .eyebrow::before { background: var(--bugday-300); }
+@media (max-width: 639.98px) {
+  .page-hero__actions .btn { flex: 1 1 100%; }
+}
+
+/* Güven şeridi (4 rakam) */
+.trust-strip {
+  list-style: none; margin: clamp(24px, 4vw, 40px) 0 0; padding: clamp(20px, 3vw, 28px) 0;
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px 24px;
+  border-top: 1px dashed var(--kirec-300); border-bottom: 1px dashed var(--kirec-300);
+}
+.trust-strip .stat__num { font-size: clamp(1.9rem, 3.2vw, 2.8rem); }
+.trust-strip .stat__num .suffix { margin-left: 6px; }
+@media (max-width: 899.98px) { .trust-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* Form: fieldset grupları */
+.sell-form .form { gap: var(--space-5); }
+.form__group { border: 0; margin: 0; padding: 0; min-width: 0; display: grid; gap: 16px; }
+.form__legend {
+  display: inline-flex; align-items: center; gap: 10px; padding: 0; margin: 0 0 4px;
+  font-family: var(--font-mono); font-size: .72rem; font-weight: 500; letter-spacing: .16em; color: var(--ink-3);
+}
+.form__legend::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex: none; }
+.form__group + .form__group { padding-top: var(--space-4); border-top: 1px dashed var(--border); }
+.sell-form .form__actions { align-items: flex-start; gap: 12px 20px; }
+.sell-form .form__actions .form__note { flex: 1 1 260px; max-width: 46ch; }
+.sell-form input.mono { font-size: .95rem; }
+.sell-form .field > label .muted { font-weight: 400; }
+
+/* Form yanı: süreç + iletişim kartları */
+.sell-aside { display: grid; gap: var(--space-5); }
+.sell-aside__card { overflow: visible; }
+.sell-aside__card .eyebrow { margin-bottom: var(--space-3); }
+.sell-aside__steps .step { padding-bottom: 20px; padding-left: 56px; }
+.sell-aside__steps .step:last-child { padding-bottom: 0; }
+.sell-aside__steps .step__num { width: 36px; height: 36px; font-size: .74rem; }
+.sell-aside__steps .step::before { left: 18px; }
+.sell-aside__steps .step__title { font-size: 1.05rem; margin-bottom: 2px; }
+.sell-aside__steps .step p { font-size: .88rem; }
+.sell-aside__text { color: var(--ink-2); font-size: .95rem; margin: 0 0 var(--space-4); }
+.sell-aside__contact { gap: 10px; }
+@media (max-width: 899.98px) { .sell-aside { position: static; } }
+
+/* Hangi arazileri alıyoruz: iki liste */
+.buy-grid { align-items: start; }
+.buy-list {
+  padding: clamp(22px, 3vw, 32px); background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-l); box-shadow: var(--shadow-s); border-top: 4px solid var(--cimen-500);
+}
+.buy-list--no { border-top-color: var(--toprak-300); }
+.buy-list__title { display: flex; align-items: center; gap: 12px; font-size: 1.3rem; margin: 0 0 var(--space-4); }
+.buy-list__mark {
+  width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; flex: none;
+  background: var(--cimen-100); color: var(--cimen-700);
+}
+.buy-list--no .buy-list__mark { background: var(--kirec-100); color: var(--toprak-500); }
+.buy-list__mark .icon { width: 1.1rem; height: 1.1rem; stroke-width: 2.4; }
+.buy-list ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.buy-list li { position: relative; padding-left: 26px; color: var(--ink-2); font-size: .95rem; line-height: 1.55; }
+.buy-list li strong { color: var(--ink); font-weight: 600; }
+.buy-list li::before {
+  content: ""; position: absolute; left: 0; top: .55em; width: 12px; height: 12px; border-radius: 3px; transform: rotate(8deg);
+  background: var(--cimen-300); border: 1px solid var(--cimen-500);
+}
+.buy-list--no li::before { background: var(--kirec-200); border-color: var(--toprak-300); border-radius: 50%; transform: none; }
+.buy-list li .badge { vertical-align: middle; margin-left: 2px; }
+.buy-list__note {
+  margin: var(--space-5) 0 0; padding: 14px 16px; border-radius: var(--radius); background: var(--bugday-100);
+  border: 1px solid var(--bugday-300); color: var(--toprak-700); font-size: .9rem;
+}
+.buy-list__note em { font-style: normal; font-weight: 600; color: var(--ink); }
+
+/* Değerleme adımları */
+.value-list { list-style: none; margin: var(--space-5) 0; padding: 0; display: grid; gap: 16px; }
+.value-list li { display: flex; gap: 16px; align-items: flex-start; padding: 16px 18px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); }
+.value-list li > div { color: var(--ink-2); font-size: .95rem; line-height: 1.55; }
+.value-list li strong { color: var(--ink); }
+.value-list__num {
+  flex: none; display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: 50%;
+  background: var(--cimen-100); color: var(--cimen-900); border: 1px solid var(--cimen-300); font-size: .76rem; letter-spacing: .06em;
+}
+.split .split__media img { aspect-ratio: 4 / 5; }
+@media (max-width: 899.98px) { .split .split__media img { aspect-ratio: 4 / 3; } }
+
+/* SSS: data-render iç kabı dış .faq ızgarasının parçası */
+.faq > [data-render] { display: contents; }
+
+/* Banner fotoğrafı: gökyüzü yerine tarla ve kişiler görünsün */
+.page-hero--sell .page-hero__bg { object-position: center 68%; }
+
+/* Banner: açık renkli figürler/gökyüzü üzerinde lead okunabilirliği için güçlendirilmiş overlay */
+.page-hero--sell::before {
+  background:
+    linear-gradient(90deg, rgba(20,48,31,.88) 0%, rgba(20,48,31,.6) 55%, rgba(20,48,31,.3) 100%),
+    linear-gradient(180deg, rgba(20,48,31,.1) 0%, rgba(28,20,16,.55) 100%);
+}
+
+/* "Neden Tarlaal" 4 özellik: tablet aralığında 3+1 yerine 2+2 */
+@media (min-width: 640px) and (max-width: 899.98px) {
+  .section--why .grid--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* Değerleme .split: tablet'te alt alta (fotoğraf üstte, 16/9) */
+@media (max-width: 899.98px) {
+  .split { grid-template-columns: minmax(0, 1fr); }
+  .split .split__media img { aspect-ratio: 16 / 9; }
+}
+
+/* SSS başlığı: 1366'da buton başlığın altına düşmesin */
+.container--narrow .section__head { flex-wrap: nowrap; }
+.container--narrow .section__head h2 { font-size: clamp(1.7rem, 3vw, 2.4rem); }
+@media (max-width: 639.98px) { .container--narrow .section__head { flex-wrap: wrap; } }
+
+/* ---- Tur 2 düzeltmeleri ---- */
+
+/* Yan kart: hazırlık listesi */
+.prep-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.prep-list li { position: relative; padding-left: 26px; color: var(--ink-2); font-size: .9rem; line-height: 1.5; }
+.prep-list li strong { color: var(--ink); font-weight: 600; }
+.prep-list li::before {
+  content: ""; position: absolute; left: 0; top: .5em; width: 12px; height: 12px; border-radius: 3px; transform: rotate(8deg);
+  background: var(--cimen-300); border: 1px solid var(--cimen-500);
+}
+
+/* "Neden Tarlaal" 4 özellik: 640–1199px'te 2+2, 1200+ 4 sütun (3+1 yetim kutu olmasın) */
+@media (min-width: 640px) and (max-width: 1199.98px) {
+  .section--why .grid--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 1200px) {
+  .section--why .grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+

@@ -1,0 +1,159 @@
+/* ==========================================================================
+   Tarlaal — hakkimizda.html sayfa stilleri
+   Yalnızca bu sayfaya özgü bileşenler: hikâye (editöryal iki kolon),
+   değer kartları, rakam bandı, zaman çizelgesi (.history), belgeler kutusu.
+   ========================================================================== */
+
+/* ---------- Hikâye: iki kolonlu editöryal düzen ---------- */
+.story {
+  display: grid; gap: clamp(32px, 5vw, 72px); align-items: start;
+  grid-template-columns: minmax(0, 1fr);
+}
+@media (min-width: 900px) {
+  .story { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
+  .story__aside { position: sticky; top: calc(var(--nav-h) + 32px); }
+}
+.story__aside { display: flex; flex-direction: column; gap: clamp(24px, 3vw, 36px); }
+.story__quote {
+  position: relative; margin: 0; padding: 36px 0 0;
+  font-family: var(--font-display); font-weight: 400; font-style: italic;
+  font-size: clamp(1.45rem, 2.4vw, 2.1rem); line-height: 1.25; letter-spacing: -.012em; color: var(--ink); text-wrap: balance;
+}
+.story__quote::before {
+  content: "\201C"; position: absolute; top: -22px; left: -6px; font-size: 6.5rem; line-height: 1;
+  color: var(--bugday-300); font-style: italic; pointer-events: none;
+}
+.story__quote p { margin: 0; }
+.story__quote cite {
+  display: block; margin-top: 18px; font-family: var(--font-mono); font-style: normal; font-size: .72rem;
+  letter-spacing: .16em; color: var(--ink-3);
+}
+.story__quote cite::before { content: "— "; color: var(--accent-ink); }
+.story__media { position: relative; border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-l); background: var(--surface-2); }
+.story__media img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; filter: saturate(.92) sepia(.08); }
+.story__media figcaption {
+  position: absolute; left: 16px; bottom: 16px; display: inline-flex; align-items: center; gap: 8px;
+  padding: 7px 12px; border-radius: 999px; background: rgba(28,20,16,.72); color: var(--kirec-50);
+  font-family: var(--font-mono); font-size: .68rem; letter-spacing: .14em; backdrop-filter: blur(4px);
+}
+.story__media figcaption::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+@media (max-width: 899.98px) { .story__media img { aspect-ratio: 16 / 10; } }
+
+.story__text { font-size: 1.05rem; line-height: 1.7; color: var(--ink-2); max-width: 64ch; }
+.story__text p + p { margin-top: 1.1em; }
+.story__text p:first-of-type::first-letter {
+  float: left; margin: .08em .14em 0 0; font-family: var(--font-display); font-weight: 500; font-style: italic;
+  font-size: 4.2em; line-height: .78; color: var(--accent-ink);
+}
+.story__text strong { color: var(--ink); }
+.story__facts {
+  list-style: none; margin: clamp(24px, 3vw, 36px) 0 0; padding: 20px 0 0; display: flex; flex-wrap: wrap; gap: 10px 28px;
+  border-top: 1px dashed var(--kirec-300); font-family: var(--font-mono); font-size: .72rem; letter-spacing: .12em; color: var(--ink-3);
+}
+.story__facts li { display: inline-flex; align-items: center; gap: 8px; }
+.story__facts li::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+
+/* ---------- Değerler ---------- */
+.value-card { position: relative; overflow: hidden; }
+.value-card .feature__icon { background: var(--cimen-900); color: var(--bugday-300); }
+.value-card__num {
+  position: absolute; right: 20px; top: 14px; font-family: var(--font-display); font-style: italic; font-weight: 400;
+  font-size: 3rem; line-height: 1; color: var(--kirec-200); pointer-events: none;
+}
+
+/* ---------- Rakamlar ---------- */
+.numbers { position: relative; }
+.numbers .grid { border-top: 1px solid rgba(251,248,242,.14); padding-top: clamp(28px, 4vw, 48px); }
+.numbers .stat { padding: 8px 0; }
+/* Markanın tek-vurgu dili: başlık istatistikleri ochre (ana sayfa hero'suyla tutarlı) */
+.numbers .stat__num { font-size: clamp(2.6rem, 5vw, 4.2rem); color: var(--bugday-300); }
+.numbers .stat__label { margin-top: 10px; }
+.numbers .stat__note { margin: 6px 0 0; font-size: .88rem; color: rgba(251,248,242,.62); max-width: 26ch; }
+.numbers__foot { margin: clamp(28px, 4vw, 40px) 0 0; font-size: .85rem; color: rgba(251,248,242,.55); font-family: var(--font-mono); letter-spacing: .04em; }
+@media (min-width: 900px) {
+  .numbers .grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .numbers .stat { padding-inline: 20px; border-left: 1px solid rgba(251,248,242,.14); }
+  .numbers .stat:first-child { padding-left: 0; border-left: 0; }
+}
+
+/* ---------- Zaman çizelgesi (.history) ---------- */
+.history { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; position: relative; }
+.history__item { position: relative; padding: 0 0 32px 40px; }
+.history__item::before {
+  content: ""; position: absolute; left: 7px; top: 10px; bottom: 0; width: 1px;
+  background: repeating-linear-gradient(180deg, var(--kirec-300) 0 6px, transparent 6px 12px);
+}
+.history__item::after {
+  content: ""; position: absolute; left: 0; top: 6px; width: 15px; height: 15px; border-radius: 50%;
+  background: var(--accent); box-shadow: 0 0 0 4px var(--bg), 0 0 0 5px var(--kirec-300);
+}
+.history__item:last-child { padding-bottom: 0; }
+.history__item:last-child::before { display: none; }
+.history__item--now::after { background: var(--cimen-500); }
+.history__year {
+  display: inline-flex; align-items: center; gap: 8px; margin-bottom: 8px; padding: 4px 10px; border-radius: 999px;
+  font-family: var(--font-mono); font-size: .72rem; letter-spacing: .16em; color: var(--accent-ink);
+  background: var(--bugday-100); border: 1px solid var(--bugday-300);
+}
+.history__item--now .history__year { color: var(--cimen-900); background: var(--cimen-100); border-color: var(--cimen-300); }
+.history__title { font-size: 1.2rem; margin: 0 0 6px; }
+.history__item p { margin: 0; color: var(--ink-2); font-size: .95rem; max-width: 36ch; }
+@media (min-width: 900px) {
+  .history { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0 20px; }
+  .history__item { padding: 36px 0 0; }
+  .history__item::before {
+    left: 0; right: -20px; top: 7px; bottom: auto; height: 1px; width: auto;
+    background: repeating-linear-gradient(90deg, var(--kirec-300) 0 6px, transparent 6px 12px);
+  }
+  .history__item::after { left: 0; top: 0; }
+  .history__item:last-child { padding-top: 36px; }
+  .history__item:last-child::before { display: block; right: 0; }
+}
+
+/* ---------- Belgeler ve üyelikler ---------- */
+.docs-card {
+  position: relative; isolation: isolate; overflow: hidden; display: grid; gap: clamp(20px, 3vw, 36px); align-items: center;
+  padding: clamp(24px, 4vw, 44px); border-radius: var(--radius-xl); background: var(--surface);
+  border: 1px solid var(--border); box-shadow: var(--shadow-s);
+}
+.docs-card::before {
+  content: ""; position: absolute; inset: 10px; z-index: -1; border-radius: calc(var(--radius-xl) - 8px);
+  border: 1px dashed var(--kirec-300); pointer-events: none;
+}
+@media (min-width: 900px) { .docs-card { grid-template-columns: minmax(0, 1fr) auto; } }
+.docs-card h2 { font-size: clamp(1.5rem, 2.4vw, 2rem); }
+.docs-card p { color: var(--ink-2); max-width: 62ch; }
+.docs-card .cluster { margin-top: var(--space-4); }
+.docs-stamp {
+  justify-self: center; display: grid; place-items: center; text-align: center; gap: 4px;
+  width: 150px; height: 150px; border-radius: 50%; border: 2px solid var(--cimen-700); color: var(--cimen-700);
+  font-family: var(--font-mono); font-size: .62rem; letter-spacing: .18em; line-height: 1.35; transform: rotate(-8deg);
+  box-shadow: inset 0 0 0 5px var(--surface), inset 0 0 0 6px var(--cimen-300); opacity: .9;
+}
+.docs-stamp strong { display: block; font-family: var(--font-display); font-size: 1.3rem; font-weight: 500; letter-spacing: -.01em; line-height: 1; }
+.docs-stamp strong b { color: var(--accent-ink); font-weight: 600; }
+
+/* ---------- Sayfa banner'ı: parlak foto üstünde okunurluk ---------- */
+.about-hero::before {
+  background: linear-gradient(180deg, rgba(20,48,31,.42) 0%, rgba(20,48,31,.58) 45%, rgba(28,20,16,.9) 100%);
+}
+.about-hero .eyebrow { color: var(--bugday-300); }
+.about-hero .eyebrow::before { background: var(--bugday-300); }
+.about-hero .breadcrumb { color: var(--kirec-200); }
+.about-hero .breadcrumb, .about-hero .page-hero__title, .about-hero .lead { text-shadow: 0 1px 14px rgba(28,20,16,.45); }
+
+
+/* ---------- Duyarlı düzeltmeler (inceleme turu 1) ---------- */
+/* Mobil: fidan görseli gövdesi kesilmesin, rozet bitkinin üstüne binmesin */
+@media (max-width: 899.98px) {
+  .story__media img { aspect-ratio: 4 / 3; object-position: center 30%; }
+  .story__media figcaption { left: 12px; bottom: 12px; }
+}
+/* Dar ekranda eyebrow tek satırda kalsın */
+@media (max-width: 639.98px) {
+  .about-hero .eyebrow { font-size: .66rem; letter-spacing: .12em; }
+}
+/* Tablet: rakamlar ve danışman kartları 3+1 yerine 2×2 */
+@media (min-width: 640px) and (max-width: 899.98px) {
+  .numbers .grid--4, #ekip .grid--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
